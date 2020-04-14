@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mesuringtool;
+package measuringtool.Coupling;
 
 import java.awt.Color;
+import measuringtool.Inheritance.SelectInheritance;
 import measuringtool.Size.Variables.CodeEdit;
 import measuringtool.Size.Variables.CopyCodeSize;
 import measuringtool.Size.Variables.SelectSize;
@@ -15,12 +16,12 @@ import measuringtool.Size.Variables.TypeSize;
  *
  * 
  */
-public class CodeType extends javax.swing.JFrame {
+public class CodeTypecoupling extends javax.swing.JFrame {
 
     /**
      * Creates new form Front
      */
-    public CodeType() {
+    public CodeTypecoupling() {
         initComponents();
         jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
@@ -165,8 +166,9 @@ public class CodeType extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-    new SelectSize().setVisible(true); 
-         
+       // close();
+       
+        new SelectCoupling().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
@@ -186,14 +188,30 @@ public class CodeType extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CodeType.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodeTypecoupling.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CodeType.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodeTypecoupling.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CodeType.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodeTypecoupling.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CodeType.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodeTypecoupling.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -214,7 +232,7 @@ public class CodeType extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CodeType().setVisible(true);
+                new CodeTypecoupling().setVisible(true);
             }
         });
     }
