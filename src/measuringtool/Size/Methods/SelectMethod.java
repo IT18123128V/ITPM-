@@ -3,30 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package measuringtool.Size.Variables;
+
+package measuringtool.Size.Methods;
 
 import java.io.File;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import measuringtool.Size.Methods.CodeEditMethod;
+
+
+
+
+
 import mesuringtool.Home;
 
 /**
  *
  * @author asus
  */
-public class SelectSize extends javax.swing.JFrame {
-
+public class SelectMethod extends javax.swing.JFrame {
+    
     private final JFileChooser openFileChooser;
     
     private final JFileChooser openFileChooserCPluse;
-    
-    
+
     /**
-     * Creates new form Select
+     * Creates new form SelectMethod
      */
-    public SelectSize() {
+    public SelectMethod() {
         initComponents();
         
         openFileChooserCPluse = new JFileChooser();
@@ -35,6 +41,7 @@ public class SelectSize extends javax.swing.JFrame {
         
         openFileChooser = new JFileChooser();
         openFileChooser.setFileFilter(new FileNameExtensionFilter("JAVA Files", "java"));
+        
         
     }
 
@@ -75,7 +82,7 @@ public class SelectSize extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 70)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText(" Size, Variables, and Methods ");
+        jLabel3.setText("Method");
 
         jButton2.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darcula.selection.color1"));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -224,48 +231,42 @@ public class SelectSize extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        new CodeEditMethod().setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btopenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btopenActionPerformed
 
         int returnValue = openFileChooser.showOpenDialog(this);
-        
+
         if (returnValue == JFileChooser.APPROVE_OPTION){
             jTextField1.setText("Selected");
         }
         else{
             jTextField1.setText("Please Select");
         }
-        
-    
+
     }//GEN-LAST:event_btopenActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    new CodeEdit().setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-     new Home().setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-                int returnValue = openFileChooserCPluse.showOpenDialog(this);
-        
+
+        int returnValue = openFileChooserCPluse.showOpenDialog(this);
+
         if (returnValue == JFileChooser.APPROVE_OPTION){
             jTextField1.setText("Okay");
         }
         else{
             jTextField1.setText("Please Select");
         }
-        
-        
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -285,21 +286,20 @@ public class SelectSize extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SelectSize.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectMethod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SelectSize.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectMethod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SelectSize.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectMethod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SelectSize.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectMethod.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SelectSize().setVisible(true);
+                new SelectMethod().setVisible(true);
             }
         });
     }

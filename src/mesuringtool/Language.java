@@ -6,7 +6,7 @@
 package mesuringtool;
 
 import java.awt.Color;
-import measuringtool.Size.Variables.SelectSize;
+import measuringtool.Size.Size.SelectSize;
 
 
 

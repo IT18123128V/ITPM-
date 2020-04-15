@@ -7,10 +7,7 @@ package measuringtool.Coupling;
 
 import java.awt.Color;
 import measuringtool.Inheritance.SelectInheritance;
-import measuringtool.Size.Variables.CodeEdit;
-import measuringtool.Size.Variables.CopyCodeSize;
-import measuringtool.Size.Variables.SelectSize;
-import measuringtool.Size.Variables.TypeSize;
+
 
 /**
  *
@@ -60,7 +57,7 @@ public class CodeTypecoupling extends javax.swing.JFrame {
         jButton2.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darcula.selection.color2"));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Past Code");
+        jButton2.setText("Paste Code");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -154,7 +151,7 @@ public class CodeTypecoupling extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     new CopyCodeSize().setVisible(true);
+     new CopyCodeCoupling().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -162,7 +159,7 @@ public class CodeTypecoupling extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-     new TypeSize().setVisible(true);
+    new TypeCoupling().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

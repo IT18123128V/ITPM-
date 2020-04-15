@@ -6,10 +6,10 @@
 package measuringtool.Size.Variables;
 
 import java.awt.Color;
-import measuringtool.Inheritance.SelectInheritance;
+
 import measuringtool.Size.Variables.CodeEdit;
 import measuringtool.Size.Variables.CopyCodeSize;
-import measuringtool.Size.Variables.SelectSize;
+import measuringtool.Size.Size.SelectSize;
 import measuringtool.Size.Variables.TypeSize;
 
 /**
