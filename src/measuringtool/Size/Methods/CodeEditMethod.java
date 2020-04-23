@@ -5,6 +5,7 @@
  */
 package measuringtool.Size.Methods;
 
+import java.awt.Color;
 import mesuringtool.Home;
 
 /**
@@ -18,6 +19,7 @@ public class CodeEditMethod extends javax.swing.JFrame {
      */
     public CodeEditMethod() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**

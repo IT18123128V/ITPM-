@@ -5,6 +5,7 @@
  */
 package measuringtool.Size.Variables;
 
+import java.awt.Color;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -27,6 +28,7 @@ public class SelectVaria extends javax.swing.JFrame {
      */
     public SelectVaria() {
         initComponents();
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
         
         openFileChooserCPluse = new JFileChooser();
         openFileChooserCPluse.setFileFilter(new FileNameExtensionFilter("C++ Files", "cpp"));

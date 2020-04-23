@@ -5,6 +5,7 @@
  */
 package measuringtool.Coupling;
 
+import java.awt.Color;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import mesuringtool.Home;
@@ -24,6 +25,7 @@ public class SelectCoupling extends javax.swing.JFrame {
      */
     public SelectCoupling() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
         
                 openFileChooserCPluse = new JFileChooser();
         openFileChooserCPluse.setFileFilter(new FileNameExtensionFilter("C++ Files", "cpp"));

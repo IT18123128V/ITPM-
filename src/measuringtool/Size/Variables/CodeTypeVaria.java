@@ -5,6 +5,7 @@
  */
 package measuringtool.Size.Variables;
 
+import java.awt.Color;
 import measuringtool.Size.Size.SelectSize;
 
 /**
@@ -18,6 +19,7 @@ public class CodeTypeVaria extends javax.swing.JFrame {
      */
     public CodeTypeVaria() {
         initComponents();
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**
@@ -130,7 +132,7 @@ public class CodeTypeVaria extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(432, 432, 432)

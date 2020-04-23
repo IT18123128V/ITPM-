@@ -5,6 +5,7 @@
  */
 package measuringtool.Size.Size;
 
+import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.JFileChooser;
@@ -29,6 +30,7 @@ public class SelectSize extends javax.swing.JFrame {
      */
     public SelectSize() {
         initComponents();
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
         
         openFileChooserCPluse = new JFileChooser();
         openFileChooserCPluse.setFileFilter(new FileNameExtensionFilter("C++ Files", "cpp"));

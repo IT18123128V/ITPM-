@@ -5,6 +5,8 @@
  */
 package measuringtool.Size.Methods;
 
+import java.awt.Color;
+
 /**
  *
  * @author asus
@@ -16,6 +18,7 @@ public class CodeTypeMethod extends javax.swing.JFrame {
      */
     public CodeTypeMethod() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**

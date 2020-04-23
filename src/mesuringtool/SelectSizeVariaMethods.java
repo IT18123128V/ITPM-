@@ -5,6 +5,7 @@
  */
 package mesuringtool;
 
+import java.awt.Color;
 import measuringtool.Size.Methods.CodeTypeMethod;
 import measuringtool.Size.Variables.CodeTypeVaria;
 import measuringtool.Size.Variables.CodeTypesize;
@@ -20,6 +21,7 @@ public class SelectSizeVariaMethods extends javax.swing.JFrame {
      */
     public SelectSizeVariaMethods() {
         initComponents();
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**

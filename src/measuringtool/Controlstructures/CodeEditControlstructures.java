@@ -5,6 +5,7 @@
  */
 package measuringtool.Controlstructures;
 
+import java.awt.Color;
 import mesuringtool.Home;
 
 /**
@@ -18,6 +19,7 @@ public class CodeEditControlstructures extends javax.swing.JFrame {
      */
     public CodeEditControlstructures() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**

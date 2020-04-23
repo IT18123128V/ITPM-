@@ -5,6 +5,7 @@
  */
 package measuringtool.Controlstructures;
 
+import java.awt.Color;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import mesuringtool.Home;
@@ -23,6 +24,7 @@ public class SelectControlstructures extends javax.swing.JFrame {
      */
     public SelectControlstructures() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
         
         openFileChooser = new JFileChooser();
         openFileChooser.setFileFilter(new FileNameExtensionFilter("JAVA Files", "java"));

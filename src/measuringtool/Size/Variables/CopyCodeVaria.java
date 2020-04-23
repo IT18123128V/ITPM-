@@ -5,6 +5,7 @@
  */
 package measuringtool.Size.Variables;
 
+import java.awt.Color;
 import mesuringtool.Home;
 
 /**
@@ -18,6 +19,7 @@ public class CopyCodeVaria extends javax.swing.JFrame {
      */
     public CopyCodeVaria() {
         initComponents();
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**

@@ -3,19 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package measuringtool.Size.Methods;
 
+import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import measuringtool.Size.Methods.CodeEditMethod;
-
-
-
-
 
 import mesuringtool.Home;
 
@@ -24,9 +20,9 @@ import mesuringtool.Home;
  * @author asus
  */
 public class SelectMethod extends javax.swing.JFrame {
-    
+
     private final JFileChooser openFileChooser;
-    
+
     private final JFileChooser openFileChooserCPluse;
 
     /**
@@ -34,15 +30,14 @@ public class SelectMethod extends javax.swing.JFrame {
      */
     public SelectMethod() {
         initComponents();
-        
+        jPanel1.setBackground(new Color(0, 0, 0, 200));
+
         openFileChooserCPluse = new JFileChooser();
         openFileChooserCPluse.setFileFilter(new FileNameExtensionFilter("C++ Files", "cpp"));
-        
-        
+
         openFileChooser = new JFileChooser();
         openFileChooser.setFileFilter(new FileNameExtensionFilter("JAVA Files", "java"));
-        
-        
+
     }
 
     /**
@@ -247,10 +242,9 @@ public class SelectMethod extends javax.swing.JFrame {
 
         int returnValue = openFileChooser.showOpenDialog(this);
 
-        if (returnValue == JFileChooser.APPROVE_OPTION){
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
             jTextField1.setText("Selected");
-        }
-        else{
+        } else {
             jTextField1.setText("Please Select");
         }
 
@@ -260,10 +254,9 @@ public class SelectMethod extends javax.swing.JFrame {
 
         int returnValue = openFileChooserCPluse.showOpenDialog(this);
 
-        if (returnValue == JFileChooser.APPROVE_OPTION){
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
             jTextField1.setText("Okay");
-        }
-        else{
+        } else {
             jTextField1.setText("Please Select");
         }
 

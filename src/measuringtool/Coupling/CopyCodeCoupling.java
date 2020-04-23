@@ -5,6 +5,7 @@
  */
 package measuringtool.Coupling;
 
+import java.awt.Color;
 import mesuringtool.Home;
 
 /**
@@ -18,6 +19,7 @@ public class CopyCodeCoupling extends javax.swing.JFrame {
      */
     public CopyCodeCoupling() {
         initComponents();
+         jPanel1.setBackground(new Color(0, 0, 0, 200));
     }
 
     /**
