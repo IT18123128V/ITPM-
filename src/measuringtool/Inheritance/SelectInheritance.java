@@ -6,8 +6,18 @@
 package measuringtool.Inheritance;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+import measuringtool.Coupling.CodeComplexity;
 import mesuringtool.Home;
 
 /**
@@ -28,7 +38,7 @@ public class SelectInheritance extends javax.swing.JFrame {
         
         openFileChooserCPluse = new JFileChooser();
         openFileChooserCPluse.setFileFilter(new FileNameExtensionFilter("C++ Files", "cpp"));
-        
+       // BufferedReader reader = new BufferedReader(new FileReader(filename));
         
         openFileChooser = new JFileChooser();
         openFileChooser.setFileFilter(new FileNameExtensionFilter("JAVA Files", "java"));
@@ -121,23 +131,12 @@ public class SelectInheritance extends javax.swing.JFrame {
         jTable1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "Count", "Class Name", "NDI", "NIDI", "TI", "CI"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
-            };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
             }
-        });
+        ));
         jTable1.setSelectionBackground(new java.awt.Color(75, 110, 200));
         jScrollPane1.setViewportView(jTable1);
 
@@ -220,14 +219,61 @@ public class SelectInheritance extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                int returnValue = openFileChooser.showOpenDialog(this);
+        try {
+            //                int returnValue = openFileChooser.showOpenDialog(this);
+//
+//        if (returnValue == JFileChooser.APPROVE_OPTION){
+//            jTextField1.setText("Selected");
+//        }
+//        else{
+//            jTextField1.setText("Please Select");
+//        }
+
+JFileChooser chooser = new JFileChooser();
+chooser.showOpenDialog(null);
+File f  = chooser.getSelectedFile();
+String filename = f.getAbsolutePath();
+jTextField1.setText(filename);
+BufferedReader br  = new BufferedReader( new FileReader(f));
+
+String firstLine = br.readLine().trim();
+String[] columnName = firstLine.split(",");
+
+DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+model.setColumnIdentifiers(columnName);
+
+CodeComplexity CC = new CodeComplexity();
+// passing line by line from text area
+//for (String line : scan.getText().split("\\n"))
+//{
+//    if(!line.trim().isEmpty())
+//    {
+//        CC.codeOnly(line);
+//        Object JFill[] = {line,CC.getCs(),CC.getCtc(),CC.getCnc(),CC.getCi(),CC.getTW(),CC.getCps(),CC.getCr(),CC.getCs(),CC.getCr()};
+//        model.addRow(JFill);
+//        CC.resetAllGrades();
+//        
+//        
+//    }
+//}
+
+
+Object[] tablines = br.lines().toArray();
+
+for(int i=0; i<tablines.length; i++ ){
+    
+    String line =  tablines[i].toString().trim();
+    String[] dataRow = line.split("/");
+            model.addRow(dataRow);
+}
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SelectInheritance.class.getName()).log(Level.SEVERE, null, ex);   
+        } catch (IOException ex) {
+            Logger.getLogger(SelectInheritance.class.getName()).log(Level.SEVERE, null, ex);
+        }
+               
         
-        if (returnValue == JFileChooser.APPROVE_OPTION){
-            jTextField1.setText("Selected");
-        }
-        else{
-            jTextField1.setText("Please Select");
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
